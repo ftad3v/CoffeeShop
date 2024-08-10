@@ -7,43 +7,45 @@ const Contact = () => {
     <div
       className="w-full 
     tablet:h-[700px] 
-    desktop:bg-ContactBanner 
-    tablet:bg-ContactBannerWall 
-    mobile:bg-ContactBannerWall 
+    mobile:h-[500px]
+    bg-ContactBanner 
     bg-no-repeat 
     bg-center 
     bg-cover 
     flex 
     items-center 
-    desktop:justify-end 
-    mobile:justify-center 
-    tablet:justify-center 
-    desktop:pe-[120px] 
-    tablet:pe-20"
+    desktop:justify-start 
+    mobile:justify-start 
+    tablet:justify-start
+    desktop:ps-[120px] 
+    tablet:ps-20
+    mobile:ps-10"
     >
       <div
         className="
       desktop:w-80 
-    desktop:text-white 
+    desktop:text-black 
     tablet:text-black 
     mobile:text-black 
-    tablet:text-center
+    tablet:text-start
     desktop:text-start"
       >
         <div
           className="
         flex 
         tablet:items-center 
-        desktop:items-start 
+        desktop:items-center 
         desktop:flex-col  
         gap-5  
-        mobile:justify-center 
-        tablet:justify-center 
-        desktop:w-80"
+        mobile:justify-start 
+        tablet:justify-start 
+        desktop:w-80
+        mobile:w-1/2"
         >
           <GrMapLocation
             size={100}
             className="
+            mobile:w-10
           tablet:w-20 
           desktop:w-32"
           />
@@ -52,13 +54,18 @@ const Contact = () => {
           uppercase 
           desktop:text-6xl 
           tablet:text-4xl 
+          mobile:text-3xl
           font-bold"
           >
             coffee and you
           </h2>
         </div>
-        <div className="uppercase">
-          <h3 className="text-[40px]">
+        <div className="uppercase mobile:w-1/2">
+          <h3
+            className="desktop:text-6xl 
+            tablet:text-4xl 
+            mobile:text-3xl"
+          >
             <span className="font-bold">44</span> park street
           </h3>
           <p className="mb-3">

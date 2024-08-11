@@ -26,10 +26,23 @@ interface CartContextType {
 const StoreContext = createContext<CartContextType | undefined>(undefined);
 
 const StoreContextProvider = ({ children }: { children: ReactNode }) => {
-  const itemsJson = localStorage.getItem("cartList");
-  const prevItems: CardItemProps[] =
-    itemsJson != null ? JSON.parse(itemsJson) : [];
-  const [cartItems, setCartItems] = useState<CardItemProps[]>(prevItems);
+  // const itemsJson = localStorage.getItem("cartList");
+  //   const prevItems: CardItemProps[] =
+  //   itemsJson != null ? JSON.parse(itemsJson) : [];
+  //   const [cartItems, setCartItems] = useState<CardItemProps[]>(prevItems);
+  const [cartItems, setCartItems] = useState<CardItemProps[]>([]);
+
+
+  // We need `useEffect` to prevent `localStorage is not define`
+  // But this code is not working correctly
+  // When we launch the web at first time or open another new tab, cartList is empty :(
+  // To fix that, we should use it outside the `useEffect` like the above commented code
+  useEffect(() => {
+    const itemsJson = localStorage.getItem("cartList");
+    const prevItems: CardItemProps[] =
+      itemsJson != null ? JSON.parse(itemsJson) : [];
+    setCartItems(prevItems);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("cartList", JSON.stringify(cartItems));

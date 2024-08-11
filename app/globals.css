@@ -1,23 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 @font-face {
   font-family: "IranSans";
   src: url("../public/font/IRANSansWebFaNum.woff2") format("woff2");
-}
+} */
 @font-face {
   font-family: "montserrat";
   src: url("../public/font/Montserrat-Regular.ttf") format("trueType");
 }
-@font-face {
+/* @font-face {
   font-family: "GreatVibes";
   src: url("../public/font/KaushanScript-Regular.ttf") format("trueType");
-}
+} */
 
-html {
+/* html {
   font-family: "IranSans";
-}
+} */
 body {
   box-sizing: border-box;
   padding: 0;

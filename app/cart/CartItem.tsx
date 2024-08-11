@@ -27,7 +27,7 @@ function CartItem(item: CardItemProps) {
 
       <div className="flex flex-col items-center  justify-center ">
         <span className="my-5 text-[#5c4543] text-2xl text-center font-bold">
-          $ {item.price * item.count}
+          $ {item.price *(item.count || 1)}
         </span>
         <div className="flex justify-between items-center pb-5">
           <button className="w-8 h-8 bg-[#dc8068] text-white rounded-lg text-3xl flex items-center justify-center"
